@@ -1,0 +1,25 @@
+<calculation>
+  <airport>EGLL</airport>
+  <runwayDesignator>27R</runwayDesignator>
+  <tora>3759m</tora>
+  <toda>3837m</toda>
+  <asda>3759m</asda>
+  <lda>3519m</lda>
+  <obstacle>
+    <height>5</height>
+    <length>15</length>
+    <distanceThreshold>50</distanceThreshold>
+  </obstacle>
+  <user>
+    <username>bing</username>
+    <adminAccess>true</adminAccess>
+    <firstName>bing</firstName>
+    <lastName>bong</lastName>
+    <email>bingo95@atc.co</email>
+  </user>
+  <takeOffDirection>Away from Obstacle</takeOffDirection>
+  <aircraft>
+    <model>Boeing 777-300ER</model>
+    <blastDist>60</blastDist>
+  </aircraft>
+</calculation>

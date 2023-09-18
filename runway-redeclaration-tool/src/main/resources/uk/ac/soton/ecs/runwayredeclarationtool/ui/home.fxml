@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.Integer?>
+<?import javafx.scene.control.skin.SplitPaneSkin.Content?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="470.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/19"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="uk.ac.soton.ecs.runwayredeclarationtool.ui.HomeController">
+  <children>
+    <Pane prefHeight="470.0" prefWidth="941.0"/>
+    <Pane fx:id="displayPane" prefHeight="470.0" prefWidth="941.0">
+      <children>
+        <Button fx:id="resetButton" layoutX="216.0" layoutY="402.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="60.0" text="Reset"/>
+<!--        <Button layoutX="100.0" layoutY="14.0" mnemonicParsing="false" prefHeight="60.0"-->
+<!--          prefWidth="92" text="Show Breakdown..." wrapText="true" onAction="#showBreakdown"-->
+<!--          disable="true" fx:id="breakdownButton"/>-->
+          <!--        <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" prefHeight="60.0"-->
+          <!--          prefWidth="92" text="Show Breakdown..." wrapText="true" onAction="#showBreakdown"-->
+          <!--          disable="true" fx:id="breakdownButton"/>-->
+        <Button fx:id="protan" layoutX="330" layoutY="402.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="95" text="protanopia deuteranopia"/>
+        <Button fx:id="tritan" layoutX="427" layoutY="402.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="95" text="tritanopia"/>
+        <!--             <Button fx:id="deuteran" layoutX="450" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" text="deuteran" />-->
+        <ScrollPane fx:id="notificationsPane" layoutX="215.0" layoutY="9.0" prefHeight="70.0"
+          prefWidth="390.0">
+          <content>
+            <VBox fx:id="notificationsContent" minHeight="70.0" minWidth="0.0" prefWidth="257.0"/>
+          </content>
+        </ScrollPane>
+        <Button layoutX="770.0" layoutY="14.0" mnemonicParsing="false" prefHeight="60.0"
+          prefWidth="76.5" text="Admin" onMouseClicked="#openAdminPanel"/>
+        <Button layoutX="850.0" layoutY="14.0" mnemonicParsing="false" prefHeight="60.0"
+          prefWidth="76.5" text="Logout" onMouseClicked="#logout"/>
+        <Button onMouseClicked="#importBox" layoutX="690.0" layoutY="14.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="76.5" text="Import..."/>
+        <Button onMouseClicked="#exportBox" layoutX="610.0" layoutY="14.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="76.5" text="Export..."/>
+        <Button fx:id="rotateButton" layoutX="643.0" layoutY="402.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="66.0" text="Rotate Runway" textAlignment="CENTER"
+          wrapText="true"/>
+        <Button fx:id="switchViewButton" layoutX="573.0" layoutY="402.0" mnemonicParsing="false"
+          prefHeight="60.0" prefWidth="66.0" text="Switch View" textAlignment="CENTER"
+          wrapText="true"/>
+
+        <Canvas fx:id="canvas" height="312.0" layoutX="209.0" layoutY="85.0" width="521.0"/>
+        <!--             TOP DOWN TEXT-->
+        <Text fx:id="firstVert" layoutX="589.0" layoutY="184.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="rightHorizontal" layoutX="698.0" layoutY="268.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="secondVert" layoutX="412.0" layoutY="297.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="largeHorizontal" layoutX="276.0" layoutY="353.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="smallHorizontal" layoutX="258.0" layoutY="314.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="leftHorizontal" layoutX="209.0" layoutY="269.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="thirdVert" layoutX="345.0" layoutY="208.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="leftDir" layoutX="309.0" layoutY="246.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+        <Text fx:id="rightDir" layoutX="611.0" layoutY="246.0" strokeType="OUTSIDE"
+          strokeWidth="0.0"/>
+
+        <!--             TOWARDS SIDE VIEW TEXT-->
+        <Text fx:id="toraTodaAsda" layoutX="365.0" layoutY="315" strokeType="OUTSIDE"
+          strokeWidth="0.0" text="toratodaasda"/>
+        <Text fx:id="buffer" layoutX="506" layoutY="320" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="buffer"/>
+        <Text fx:id="minResa" layoutX="555" layoutY="320" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="minRESA"/>
+        <Text fx:id="towardHeight" layoutX="700" layoutY="235" strokeType="OUTSIDE"
+          strokeWidth="0.0" text="towardheight"/>
+        <Text fx:id="heightTimesFifty" layoutX="610" layoutY="350" strokeType="OUTSIDE"
+          strokeWidth="0.0" text="hxfifty"/>
+        <Text fx:id="towardLdaOld" layoutX="365.0" layoutY="355" strokeType="OUTSIDE"
+          strokeWidth="0.0" text=""/>
+
+        <Text fx:id="towardLda" layoutX="335.0" layoutY="200" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="LDA"/>
+        <Text fx:id="towardtora" layoutX="370.0" layoutY="315" strokeType="OUTSIDE"
+          strokeWidth="0.0" text="tor"/>
+        <Text fx:id="towardasda" layoutX="370.0" layoutY="353" strokeType="OUTSIDE"
+          strokeWidth="0.0" text="asd"/>
+        <Text fx:id="towardtoda" layoutX="370" layoutY="390" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="tod"/>
+
+        <!--             AWAY SIDE VIEW TEXT-->
+        <Text fx:id="awayHeight" layoutX="230" layoutY="235" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="planeheight"/>
+        <Text fx:id="awayLda" layoutX="565.0" layoutY="200" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="AwayLDA"/>
+        <Text fx:id="tora" layoutX="550.0" layoutY="315" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="tora"/>
+        <Text fx:id="asda" layoutX="550.0" layoutY="353" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="asda"/>
+        <Text fx:id="toda" layoutX="550.0" layoutY="390" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="toda"/>
+
+        <Canvas height="312.0" layoutX="209.0" layoutY="85.0" width="521.0"/>
+<!--        <VBox alignment="TOP_CENTER" layoutX="97.0" layoutY="15.0" prefHeight="70.0"-->
+<!--          prefWidth="230.0">-->
+<!--          <children>-->
+<!--            <ComboBox fx:id="airportSelectionBox" onMouseClicked="#selectAirport" prefHeight="25.0"-->
+<!--              prefWidth="210.0" promptText="Select Airport ...">-->
+<!--              <VBox.margin>-->
+<!--                <Insets bottom="9.0"/>-->
+<!--              </VBox.margin>-->
+<!--            </ComboBox>-->
+<!--            <ComboBox fx:id="runwaySelectionBox" layoutX="17.0" layoutY="10.0"-->
+<!--              onMouseClicked="#selectRunway" prefHeight="25.0" prefWidth="210.0"-->
+<!--              promptText="Select Runway ..."/>-->
+<!--          </children>-->
+<!--        </VBox>-->
+        <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="8.0"
+          prefHeight="455.0" prefWidth="200.0" text="Parameters">
+<!--            376 84-->
+          <content>
+            <VBox minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <fx:define>
+                  <Integer fx:id="min" fx:value="0"/>
+                  <Integer fx:id="max" fx:value="4000"/>
+                </fx:define>
+                  <Label fx:id="airp" layoutX="20.0" layoutY="59.0"
+                         text="Airport"/>
+                  <ComboBox fx:id="airportSelectionBox" onMouseClicked="#selectAirport" prefHeight="25.0"
+                            prefWidth="171.0" promptText="Select Airport ...">
+<!--                      <VBox.margin>-->
+<!--                          <Insets bottom="9.0"/>-->
+<!--                      </VBox.margin>-->
+                  </ComboBox>
+                  <Label fx:id="runw" layoutX="20.0" layoutY="59.0"
+                         text="Runway"/>
+                  <ComboBox fx:id="runwaySelectionBox" layoutX="17.0" layoutY="10.0"
+                            onMouseClicked="#selectRunway" prefHeight="25.0" prefWidth="171.0"
+                            promptText="Select Runway ..."/>
+                <Label fx:id="selectRunwayLabel" layoutX="14.0" layoutY="14.0"
+                  text="Select runway!">
+                  <font>
+                    <Font name="System Bold" size="13.0"/>
+                  </font>
+                </Label>
+                <ComboBox fx:id="caseComboBox" layoutX="14.0" layoutY="32.0" prefHeight="26.0"
+                  prefWidth="171.0"/>
+                <Label fx:id="aircraftTypeLabel" layoutX="20.0" layoutY="59.0"
+                  text="Aircraft Type"/>
+                <ComboBox fx:id="aircraftTypeComboBox" layoutX="13.0" layoutY="77.0"
+                  prefHeight="26.0" prefWidth="171.0" promptText="Select Type..."/>
+                <Label fx:id="selectObstacleLabel" layoutX="20.0" layoutY="59.0"
+                  text="Select Obstacle"/>
+                <ComboBox fx:id="predefObstComboBox" prefHeight="26.0" prefWidth="171.0"/>
+                <Label fx:id="obstacleWidthLabel" layoutX="16.0" layoutY="103.0"
+                  text="Obstacle Width (m)"/>
+                <Spinner fx:id="obstWidthSpinner" editable="true" layoutX="13.0" layoutY="121.0"
+                  prefHeight="26.0" prefWidth="171.0" min="$min" max="$max"/>
+                <Label fx:id="obstacleHeightLabel" layoutX="16.0" layoutY="150.0"
+                  text="Obstacle Height (m)"/>
+                <Spinner fx:id="obstHeightSpinner" editable="true" layoutX="13.0" layoutY="168.0"
+                  prefHeight="26.0" prefWidth="171.0" min="$min" max="$max"/>
+                <Label fx:id="distanceFromThresholdLabel" layoutX="16.0" layoutY="198.0"
+                  text="Distance from Threshold (m)"/>
+                <Spinner fx:id="obstDistSpinner" editable="true" layoutX="13.0" layoutY="216.0"
+                  prefHeight="26.0" prefWidth="172.0" min="$min" max="$max"/>
+
+                <Button fx:id="calculateButton" disable="true" layoutX="11.0" layoutY="275.0"
+                  mnemonicParsing="false" prefHeight="60.0" prefWidth="176.0" text="Calculate"/>
+              </children>
+            </VBox>
+          </content>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" layoutX="730.0" layoutY="84.0"
+          prefHeight="376.0" prefWidth="200.0" text="Result">
+          <content>
+            <VBox minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <VBox minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="200.0">
+                  <children>
+                    <Label fx:id="toraLabel" layoutX="15.0" layoutY="14.0" text="TORA"/>
+                    <TextField fx:id="toraBox" editable="false" layoutX="15.0" layoutY="32.0"/>
+                    <Label fx:id="todaLabel" layoutX="15.0" layoutY="58.0" text="TODA"/>
+                    <TextField fx:id="todaBox" editable="false" layoutX="15.0" layoutY="76.0"/>
+                    <Label fx:id="asdaLabel" layoutX="15.0" layoutY="102.0" text="ASDA"/>
+                    <TextField fx:id="asdaBox" editable="false" layoutX="15.0" layoutY="120.0"/>
+                    <Label fx:id="ldaLabel" layoutX="15.0" layoutY="184.0" text="LDA"/>
+                    <TextField fx:id="ldaBox" editable="false" layoutX="15.0" layoutY="202.0"/>
+
+                    <HBox minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+<!--                        <Button fx:id="saveButton" layoutX="7.0" layoutY="230.0"-->
+<!--                          mnemonicParsing="false"-->
+<!--                          prefHeight="60.0" prefWidth="89.0" text="Save"/>-->
+<!--                        <Button fx:id="printButton" layoutX="102.0" layoutY="230.0"-->
+<!--                          mnemonicParsing="false" prefHeight="60.0" prefWidth="89.0"-->
+<!--                          text="Print..."/>-->
+                          <Button layoutX="7.0" layoutY="230.0" mnemonicParsing="false" prefHeight="60.0"
+                                  prefWidth="184" text="Show Breakdown..." wrapText="true" onAction="#showBreakdown"
+                                  disable="true" fx:id="breakdownButton"/>
+                      </children>
+                    </HBox>
+
+                    <VBox minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <Label fx:id="textScalingLabel" layoutX="15.0" layoutY="295.0"
+                          text="Text Scaling:"/>
+                        <Slider fx:id="textScaleSlider" layoutX="15.0" layoutY="315.0"
+                          prefWidth="160" showTickLabels="false" showTickMarks="false" min="5"
+                          max="20" value="0" majorTickUnit="1" minorTickCount="0"
+                          snapToTicks="false"/>
+                      </children>
+                    </VBox>
+                  </children>
+                </VBox>
+              </children>
+            </VBox>
+          </content>
+        </TitledPane>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

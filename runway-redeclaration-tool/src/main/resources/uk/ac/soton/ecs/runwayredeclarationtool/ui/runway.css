@@ -1,0 +1,207 @@
+.button {
+    -fx-background-color: white;
+    -fx-font-family: 'Helvetica';
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-border-color: black;
+    -fx-stroke: black;
+    -fx-wrap-text : true;
+    /* -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1); */
+}
+
+.button:hover {
+    -fx-background-color: yellow;
+}
+
+.button:pressed {
+    -fx-background-color: orange;
+}
+
+.spinner:animate > .text-field {
+    -fx-background-color: transparent;
+}
+
+.spinner:minValue .decrement-arrow-button {
+    -fx-opacity: .4;
+    -fx-color: -fx-background;
+}
+
+.spinner:minValue:focused .decrement-arrow-button,
+.spinner:minValue:contains-focus .decrement-arrow-button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+.spinner:maxValue .increment-arrow-button {
+    -fx-opacity: .4;
+    -fx-color: -fx-background;
+}
+
+.spinner:maxValue:focused .increment-arrow-button,
+.spinner:maxValue:contains-focus .increment-arrow-button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+.spinner:disabled,
+.spinner:disabled:focused,
+.spinner:disabled:contains-focus {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
+    -fx-background-radius: 3, 3, 2;
+}
+
+.spinner:disabled .decrement-arrow-button:pressed,
+.spinner:disabled .increment-arrow-button:pressed {
+    -fx-color: -fx-background;
+}
+
+.spinner:disabled:focused .decrement-arrow-button,
+.spinner:disabled:contains-focus .decrement-arrow-button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+.spinner:disabled:focused .increment-arrow-button,
+.spinner:disabled:contains-focus .increment-arrow-button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+#firstVert {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#secondVert {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#thirdVert {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#rightHorizontal {
+    -fx-font-size: 13px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#leftHorizontal {
+    -fx-font-size: 13px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#largeHorizontal {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#smallHorizontal {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#leftDir {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#rightDir {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#toraTodaAsda {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#sideMiddle {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#minResa {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#towardHeight {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#awayHeight {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#heightTimesFifty {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#towardasda {
+  -fx-font-size: 15px;
+  -fx-font-family: 'Trebuchet MS';
+  -fx-fill: white;
+}
+
+#towardtora {
+  -fx-font-size: 15px;
+  -fx-font-family: 'Trebuchet MS';
+  -fx-fill: white;
+}
+
+#towardtoda {
+  -fx-font-size: 15px;
+  -fx-font-family: 'Trebuchet MS';
+  -fx-fill: white;
+}
+
+#towardLda {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#awayLda {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#tora {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#toda {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+#asda {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Trebuchet MS';
+    -fx-fill: white;
+}
+
+sidebar {
+    -fx-tick-label-fill: white;
+}

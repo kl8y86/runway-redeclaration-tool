@@ -1,0 +1,20 @@
+<Log>
+  <Calculation>
+    <AirportData>
+     <Runway>
+        <Airport>"EGLL"</Airport>
+        <RunwayDesignator>"09L"</RunwayDesignator>
+        <TORA unit="metres">3702</TORA>
+        <TODA unit="metres">3702</TODA>
+        <ASDA unit="metres">3702</ASDA>
+      </Runway>
+      <Obstacle>
+        <TakeOffDirection>"Away"</TakeOffDirection>
+        <Width unit="metres">0</Width>
+        <Height unit="metres">0</Height>
+        <DistanceThreshold unit="metres">0</DistanceThreshold>
+      </Obstacle>
+      <LDA unit="metres">3295</LDA>
+    </AirportData>
+  </Calculation>
+</Log>

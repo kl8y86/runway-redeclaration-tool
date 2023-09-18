@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="470.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.ecs.runwayredeclarationtool.ui.AdminPanelController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="470.0" prefWidth="941.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="49.0" prefWidth="191.0" text="Admin Panel" textFill="#4a4a4a">
+               <font>
+                  <Font name="Microsoft JhengHei" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" top="50.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="470.0" prefWidth="941.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="470.0" prefWidth="310.0">
+                     <children>
+                        <Label text="Aircraft Management" textFill="#5b5b5b">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <ComboBox fx:id="aircraftSelectionBox" onAction="#aircraftSelectionMade" onMouseClicked="#showAllAircraft" prefHeight="30.0" prefWidth="250.0" promptText="Select an Aircraft ...">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="400.0">
+                           <children>
+                              <Button fx:id="removeAircraftButton" disable="true" mnemonicParsing="false" onMouseClicked="#removeAircraft" prefHeight="30.0" prefWidth="125.0" text="Remove this Aircraft">
+                                 <HBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#addAircraft" prefHeight="30.0" prefWidth="100.0" text="Add Aircraft..">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <VBox alignment="CENTER" prefHeight="470.0" prefWidth="310.0">
+                     <children>
+                        <Label text="User Management" textFill="#434343">
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Microsoft JhengHei" size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <ComboBox fx:id="userSelectionBox" onAction="#userSelectionMade" onMouseClicked="#showAllUsers" prefHeight="30.0" prefWidth="180.0" promptText="Select a User ...">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <CheckBox fx:id="adminCheckBox" disable="true" mnemonicParsing="false" onMouseClicked="#alterAdminAccess" prefHeight="50.0" prefWidth="100.0" text="User is admin?" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="400.0">
+                           <children>
+                              <Button fx:id="removeUserButton" disable="true" mnemonicParsing="false" onMouseClicked="#removeUser" prefHeight="30.0" prefWidth="125.0" text="Remove this User">
+                                 <HBox.margin>
+                                    <Insets left="45.0" right="35.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#addUser" prefHeight="30.0" prefWidth="100.0" text="Add a User..">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="470.0" prefWidth="310.0">
+                     <children>
+                        <Label text="Runway Management" textFill="#5b5b5b">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="400.0">
+                           <children>
+                              <ComboBox fx:id="runwaySelectionBox" onAction="#runwaySelectionMade" onMouseClicked="#showAllRunways" prefHeight="30.0" prefWidth="250.0" promptText="Select a Runway ...">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="400.0">
+                           <children>
+                              <Button fx:id="removeRunwayButton" disable="true" mnemonicParsing="false" onMouseClicked="#removeRunway" prefHeight="30.0" prefWidth="135.0" text="Remove this Runway">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#addRunway" prefHeight="30.0" prefWidth="100.0" text="Add Runway..">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onMouseClicked="#exit" prefHeight="30.0" prefWidth="50.0" text="Exit">
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
